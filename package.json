@@ -1,0 +1,23 @@
+{
+  "name": "www.pvarki.fi",
+  "version": "1.0.0",
+  "description": "PVArki-projekti",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "install": "cd docs && gem install --user-install bundler jekyll jekyll-feed && bundle install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd docs && bundle exec jekyll serve --trace --future --unpublished"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pvarki/www.pvarki.fi.git"
+  },
+  "author": "Puolustusvoimat <info@pvarki.fi>",
+  "bugs": {
+    "url": "https://github.com/pvarki/www.pvarki.fi/issues"
+  },
+  "homepage": "https://github.com/pvarki/www.pvarki.fi#readme"
+}

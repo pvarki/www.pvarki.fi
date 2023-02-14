@@ -1,0 +1,90 @@
+{%- assign title = page.title | default: "Default" | append: " | Puolustusvoimat" -%}
+{%- assign description = page.description | default: "PVArki-projekti" -%}
+{%- assign image = page.image | default: "/images/logo.png" | absolute_url -%}
+{%- assign url = page.url | absolute_url -%}
+
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "fi-FI" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta property="og:site_name" content="Puolustusvoimat">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:locale" content="{{ site.lang | default: "fi-FI" }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="{{ image | default: "/images/logo.png"}}">
+  <meta property="og:image:alt" content="Logo">
+  <meta property="og:url" content="{{ url }}">
+  <meta name="twitter:card" content="summary_large_image">
+
+    {%- feed_meta %}
+
+    {%- seo %}
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&display=swap&subset=latin-ext" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        
+        {% if site.logo %}
+        <h1><a href="{{ site.logo_url | default: "/" | absolute_url }}"><img src="{{site.logo | relative_url}}" alt="{{ site.title | default: site.github.repository_name }}" /></a></h1>
+        {% else %}
+        <h1><a href="{{ site.logo_url | default: "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        {% endif %}
+
+        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
+
+      </header>
+
+      <section>
+
+      {{ content }}
+
+      </section>
+
+      <footer>
+
+        <div class="latest-posts">
+        <h3>Tiedotteet</h3>
+        {%- include latest-posts.html %}
+        </div>
+
+        <div class="sitemap-container">
+          <div class="sitemap-grid">
+            <div class="sitemap">
+              <div class="sitemap-links">
+                <span><a href="https://www.pvarki.fi/">www.pvarki.fi</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+	    <div class="copyright">&copy; Puolustusvoimat 2023</div>
+
+      </footer>
+
+    </div>
+
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+
+    {% if site.google_analytics %}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', '{{ site.google_analytics }}', 'auto');
+      ga('send', 'pageview');
+    </script>
+    {% endif %}
+
+  </body>
+</html>

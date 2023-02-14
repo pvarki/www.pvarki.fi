@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<div class="content">{{ content }}</div>
+
+<div class="date"><span class="published">Julkaistu {{ page.date | date: '%d.%m.%Y' }}</span>
+    {%- if page.last_modified_at -%}
+        <span class="updated"> / Päivitetty {{ page.last_modified_at | date: '%d.%m.%Y' }}</span>
+    {%- endif -%}
+</div>
