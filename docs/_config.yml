@@ -2,8 +2,15 @@ lang: fi_FI
 theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
-title: PVArki-projekti
-description: PVArki-projekti
+title: PVARKI
+description: PVARKI-projekti
 show_downloads: false
 logo: /images/logo.png
 logo_url: https://www.pvarki.fi
+background-image: url("/images/b6ZG80vTDWYiMlgaEzCF_TW0Xt2m2584OU146.jpeg")
+
+exclude:
+  - tmp/
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
