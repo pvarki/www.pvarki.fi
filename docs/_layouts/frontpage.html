@@ -1,15 +1,10 @@
 {%- assign title = page.title | default: "Default" | append: " | Puolustusvoimat" -%}
-{%- assign description = page.description | default: "PVArki-projekti" -%}
+{%- assign description = page.description | default: "PVARKI-projekti" -%}
 {%- assign image = page.image | default: "/images/logo.png" | absolute_url -%}
 {%- assign url = page.url | absolute_url -%}
 
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "fi-FI" }}">
-
-  @media screen and (max-width: 600px) {
-    div.wrapper {
-      style="margin-top: 30%">
-    }
 
   <head>
     <meta charset="UTF-8">
@@ -57,11 +52,18 @@
       </div>
   </nav>
 
+  <section>
+    <div class="title">
+      <h2>PVARKI-projekti</h2>
+    </div>
+  
+  </section>
+
 
   </div>
 
-  <div class="wrapper" style="margin-top: 15%">
-  
+  <div class="wrapper" style="margin-top: 25%">
+
       <section>
 
       {{ content }}
