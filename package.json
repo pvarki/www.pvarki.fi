@@ -1,7 +1,7 @@
 {
   "name": "www.pvarki.fi",
-  "version": "1.0.0",
-  "description": "PVArki-projekti",
+  "version": "1.1.0",
+  "description": "PVARKI-projekti",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/pvarki/www.pvarki.fi.git"
   },
-  "author": "Puolustusvoimat <info@pvarki.fi>",
+  "author": "Puolustusvoimat <benjam.broijer@mil.fi>",
   "bugs": {
     "url": "https://github.com/pvarki/www.pvarki.fi/issues"
   },

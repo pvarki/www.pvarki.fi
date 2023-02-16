@@ -10,6 +10,8 @@
      License: none (public domain)
   */
 
+  html, body {width: auto!important; overflow-x: hidden!important}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -80,7 +82,7 @@ h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 h2 {
@@ -121,10 +123,13 @@ body {
   margin: 0;
   padding: 0;
 
+  overflow-x: hidden;
+  overflow-y: scroll;
+  
   background-image: url("/images/b6ZG80vTDWYiMlgaEzCF_TW0Xt2m2584OU146.jpeg");
   background-attachment: fixed; 
   background-size: cover;
-  
+  background-color: rgb(35, 35, 42);
   
 .navbar {
     position: fixed;
@@ -153,9 +158,18 @@ body {
   margin-left: 5rem;
   margin-top: 0.5rem;
 
-  
-
 }
+
+  @media (max-width: 480px) {
+    .navbar-logo img {
+      max-height: 40px;
+      width: auto;
+      margin-right: 0.6rem;
+      margin-left: 0.5rem;
+      margin-top: 0.5rem;
+    }
+  }
+
 
 .navbar-span {
  font-size: 20px;
@@ -171,6 +185,7 @@ body {
   flex: 1;
   text-align: left;
   margin-left: 0.5rem;
+  
 }
 
 .navbar-links {
@@ -187,18 +202,27 @@ body {
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 3vw;
   font-weight: bold;
   text-align: center;
 
   background-color: #fefefe9c;
   color:rgb(0, 0, 0);
 
-  width: 30rem;
-  max-width: 860px;
+  width: auto;
+  max-width: 800px;
   margin: 0 auto;
   margin-top: 28%;
   padding: 0;
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.75rem;
+    width: auto;
+    margin-top: 100%;
+    padding: 0;
+  }
 }
 
 .center {
@@ -207,6 +231,31 @@ body {
   margin-right: auto;
   width: 50%;
 }
+
+.centerfloat {
+  float: center;
+
+}
+
+.columncontainer {
+  column-count: 2;
+  column-gap: 2em;
+  }
+  
+  @media (max-width: 800px) {
+  .columncontainer {
+    column-count: 1;
+   }
+  }
+  
+  .columni {
+    padding: 1%;
+  }
+
+  .columni {
+  width: 100%;
+  float: none;
+  }
 
   & > #menu {
     float: right;
@@ -281,7 +330,7 @@ body {
       & > .content {
 
         margin: 0;
-        padding: 0 1em 1em 1em;
+        padding: 0 1em 1em 0em;
         max-width: 100vw;
 
         p {
@@ -299,6 +348,8 @@ body {
 
         }
 
+        /* TWO COLUMNS */
+
       }
 
       & > .date {
@@ -307,6 +358,15 @@ body {
         font-size: 1em;
         font-style: italic;
 
+      }
+
+      @media (max-width: 480px) {
+        .content {
+          max-width: 480px;
+        }
+        .section {
+          max-width: 480px;
+        }
       }
 
     } // section
@@ -358,7 +418,7 @@ body {
 
       & > .sitemap-container {
 
-        margin: 1em 0 1em 0;
+        margin: 0em 0 0em 0;
         padding: 0;
         background-color: #ffffffc0;
         color: #000000;
@@ -432,7 +492,8 @@ body {
 
     } // footer
 
-
-  } // .wrapper
-
 } // body
+
+}
+
+

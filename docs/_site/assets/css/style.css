@@ -2,6 +2,11 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+html, body {
+  width: auto !important;
+  overflow-x: hidden !important;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -76,7 +81,7 @@ h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 h2 {
@@ -115,9 +120,12 @@ body {
   font-size: 1em;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
   background-image: url("/images/b6ZG80vTDWYiMlgaEzCF_TW0Xt2m2584OU146.jpeg");
   background-attachment: fixed;
   background-size: cover;
+  background-color: rgb(35, 35, 42);
 }
 body .navbar {
   position: fixed;
@@ -144,6 +152,15 @@ body .navbar-logo img {
   margin-left: 5rem;
   margin-top: 0.5rem;
 }
+@media (max-width: 480px) {
+  body .navbar-logo img {
+    max-height: 40px;
+    width: auto;
+    margin-right: 0.6rem;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}
 body .navbar-span {
   font-size: 20px;
   color: #ffffff;
@@ -167,22 +184,49 @@ body .navbar-links a {
   margin-right: 1rem;
 }
 body .title {
-  font-size: 2.5rem;
+  font-size: 3vw;
   font-weight: bold;
   text-align: center;
   background-color: rgba(254, 254, 254, 0.6117647059);
   color: rgb(0, 0, 0);
-  width: 30rem;
-  max-width: 860px;
+  width: auto;
+  max-width: 800px;
   margin: 0 auto;
   margin-top: 28%;
   padding: 0;
+}
+@media (max-width: 480px) {
+  body .title {
+    font-size: 1.75rem;
+    width: auto;
+    margin-top: 100%;
+    padding: 0;
+  }
 }
 body .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+body .centerfloat {
+  float: center;
+}
+body .columncontainer {
+  column-count: 2;
+  column-gap: 2em;
+}
+@media (max-width: 800px) {
+  body .columncontainer {
+    column-count: 1;
+  }
+}
+body .columni {
+  padding: 1%;
+}
+body .columni {
+  width: 100%;
+  float: none;
 }
 body > #menu {
   float: right;
@@ -237,8 +281,9 @@ body > .wrapper > section {
 }
 body > .wrapper > section > .content {
   margin: 0;
-  padding: 0 1em 1em 1em;
+  padding: 0 1em 1em 0em;
   max-width: 100vw;
+  /* TWO COLUMNS */
 }
 body > .wrapper > section > .content p {
   padding: 0.5em 0.5em;
@@ -253,6 +298,14 @@ body > .wrapper > section > .date {
   padding: 1em;
   font-size: 1em;
   font-style: italic;
+}
+@media (max-width: 480px) {
+  body > .wrapper > section .content {
+    max-width: 480px;
+  }
+  body > .wrapper > section .section {
+    max-width: 480px;
+  }
 }
 body > .wrapper > footer {
   margin: 0;
@@ -285,7 +338,7 @@ body > .wrapper > footer > .latest-posts > ul > li > a {
   padding: 0;
 }
 body > .wrapper > footer > .sitemap-container {
-  margin: 1em 0 1em 0;
+  margin: 0em 0 0em 0;
   padding: 0;
   background-color: rgba(255, 255, 255, 0.7529411765);
   color: #000000;
