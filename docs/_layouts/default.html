@@ -6,6 +6,11 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "fi-FI" }}">
 
+  @media screen and (max-width: 600px) {
+    div.wrapper {
+      style="margin-top: 30%">
+    }
+
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,6 +26,7 @@
   <meta property="og:image:alt" content="Logo">
   <meta property="og:url" content="{{ url }}">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
     {%- feed_meta %}
 
@@ -55,7 +61,7 @@
   </div>
 
   <div class="wrapper" style="margin-top: 15%">
-
+  
       <section>
 
       {{ content }}
@@ -65,6 +71,8 @@
       <br />
 
       <footer>
+
+      <br />
 
         <div class="sitemap-container">
           <div class="sitemap-grid">
